@@ -27,11 +27,18 @@ const toys = [
 ]
 
 const addToyToInventory = (toyObject) => {
+    // Step 1: Get maximum id currently in the array
+    //  Get index of last item in the array
     const lastIndex = toys.length - 1
+    //  Get the last object in the array
     const currentLastToy = toys[lastIndex]
+    //  Get id property value of last item in the array
     const maxId = currentLastToy.id
+    // Step 2: Increase the current max id by 1
     const idForNewToy = maxId + 1
+    // Step 3: Add the id property to each object.
     toyObject.id = idForNewToy
+    // Step 4: Add the item to the array
     toys.push(toyObject)
 }
 
